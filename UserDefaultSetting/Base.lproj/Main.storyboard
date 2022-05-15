@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,118 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UserDefaultSetting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;&lt;&lt;Today's quote&gt;&gt;&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4o-Oo-ueA">
+                                <rect key="frame" x="91.5" y="65" width="231" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                <color key="textColor" name="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzN-Y8-xrg">
+                                <rect key="frame" x="20" y="121" width="374" height="558"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="558" id="gCJ-31-3Cs"/>
+                                    <constraint firstAttribute="width" constant="374" id="qyN-lm-DaB"/>
+                                </constraints>
+                                <string key="text">The best preparation for tomorrow is doing your best today.
+
+H. Jackson Brown, Jr.
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" name="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Font" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpx-qF-cRt">
+                                <rect key="frame" x="321" y="762" width="42" height="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <color key="textColor" name="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLX-QP-x6c">
+                                <rect key="frame" x="374" y="765" width="20" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Wqz-1I-CpR"/>
+                                </constraints>
+                                <color key="tintColor" name="Color-1"/>
+                                <state key="normal" image="plus.circle.fill" catalog="system">
+                                    <color key="titleColor" name="Color-1"/>
+                                </state>
+                                <connections>
+                                    <action selector="fontPlusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q32-a8-Upq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vq-oO-XIn">
+                                <rect key="frame" x="290" y="765" width="20" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="HSM-S9-Q7g"/>
+                                </constraints>
+                                <color key="tintColor" name="Color-1"/>
+                                <state key="normal" image="minus.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="fontMinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gyp-tG-2po"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zl-mx-Iqo">
+                                <rect key="frame" x="305.5" y="827" width="90.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="textColor" name="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5YJ-Io-Iav">
+                                <rect key="frame" x="245.5" y="822.5" width="42" height="25.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="IDw-ft-YIZ"/>
+                                    <constraint firstAttribute="width" secondItem="5YJ-Io-Iav" secondAttribute="height" multiplier="49:31" id="zti-CC-Gr1"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="darkModeButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="9Ie-wO-8c5"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" name="Color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cLX-QP-x6c" secondAttribute="bottom" constant="75" id="9wm-VB-B9N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Zl-mx-Iqo" secondAttribute="bottom" constant="14" id="ChK-Gd-McW"/>
+                            <constraint firstItem="q4o-Oo-ueA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="DHd-5C-KhF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cLX-QP-x6c" secondAttribute="trailing" constant="20" id="ITq-BH-s7Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TzN-Y8-xrg" secondAttribute="bottom" constant="183" id="IoK-U5-n5F"/>
+                            <constraint firstItem="q4o-Oo-ueA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="N9M-6j-K0N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5YJ-Io-Iav" secondAttribute="bottom" constant="14" id="NPl-uS-atc"/>
+                            <constraint firstItem="cLX-QP-x6c" firstAttribute="leading" secondItem="wpx-qF-cRt" secondAttribute="trailing" constant="11" id="RZJ-Z8-fnp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Vq-oO-XIn" secondAttribute="bottom" constant="75" id="Sfw-Bg-HW1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wpx-qF-cRt" secondAttribute="bottom" constant="74" id="VFe-tP-jEK"/>
+                            <constraint firstItem="TzN-Y8-xrg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Yxb-Lc-4G8"/>
+                            <constraint firstItem="9Zl-mx-Iqo" firstAttribute="leading" secondItem="5YJ-Io-Iav" secondAttribute="trailing" constant="20" id="dLy-Ug-IrW"/>
+                            <constraint firstItem="wpx-qF-cRt" firstAttribute="leading" secondItem="7Vq-oO-XIn" secondAttribute="trailing" constant="11" id="o7t-ds-u4s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Zl-mx-Iqo" secondAttribute="trailing" constant="18" id="uuj-6N-tXb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="darkModeSwitch" destination="5YJ-Io-Iav" id="Wms-X6-D6R"/>
+                        <outlet property="labelText" destination="TzN-Y8-xrg" id="HBE-So-qgZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="minus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="Color">
+            <color red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color-1">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
